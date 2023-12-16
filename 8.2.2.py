@@ -1,6 +1,13 @@
+
+def return_float(one_taple):
+    return (float)(one_taple[1])
+
+
+
 def sort_prices(list_of_tuples):
-    return sorted(list_of_tuples, key=lambda x:(float)(x[1]))
+    return sorted(list_of_tuples, key=return_float)
     # lambda x:(float)(x[1]) = <get x, return (float)(x[1]>)
+    # lambda x:(float)(x[1]) = return_float
 
 
 
