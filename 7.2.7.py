@@ -6,7 +6,7 @@ def arrow(my_char, max_length):
 
     for counter in range(1, max_length * 2):
         if counter <= max_length:
-            arrow_string += f"{(my_char + ' ') * counter}\n"
+            arrow_string += f"{(my_char + ' ') * counter}\n" # f = format
         else:
             arrow_string += f"{(my_char + ' ') * (max_length * 2 - counter)}\n"
 
