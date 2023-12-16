@@ -20,11 +20,8 @@ def openingTexture():
     return None
 
 # -------inputWord---------------------------------------------
-def inputWord():
-    word = input("Please enter a word: ")
-
-    # print amount of bottom line
-    print ("_ " * len(word))
+def inputWord(secret_word):
+    print ("_ " * len(secret_word))
     return None
 
 # -------inputLetter---------------------------------------------
@@ -54,18 +51,28 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
     else:
         old_letters_guessed += [letter_guessed]
         return True
-
+# --------show_hidden_word----------------------------------------
+def show_hidden_word(secret_word, old_letters_guessed):
+    for letter in secret_word:
+        if letter in old_letters_guessed:
+            print(letter," ", end = '')#print without new line
+        else:
+            print("_ ", end = '')#print without new line
+    return
 # --------main----------------------------------------
 def main():
     # lists
     letter_guessed =""
-    old_letters_guessed = ["d", "a"]
+    secret_word = "mammals"
+    old_letters_guessed = []
 
     openingTexture()
-    inputWord()
+    inputWord(secret_word)
     letter_guessed = inputLetter()
 
     try_update_letter_guessed(letter_guessed, old_letters_guessed)
+    show_hidden_word(secret_word, old_letters_guessed)
+
 
 if __name__ == "__main__":
     main()
