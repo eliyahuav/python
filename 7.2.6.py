@@ -77,7 +77,7 @@ def main():
             derry = input("please enter name of derry")
             print(print_amount_derry(arr, derry))
         elif(number == 5):
-            derry = input("please enter name of derry")
+            derry = input("please enter name of derry to delete")
             delete_derry_from_arr(arr, derry)
         elif(number == 6):
             derry = input("please enter new derry to add")
