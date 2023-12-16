@@ -15,6 +15,8 @@ def sequence_del(my_str):
 def main():
 
     print(sequence_del("ppyyyyythhhhhooonnnnn"))
+    print(sequence_del("SSSSsssshhhh"))
+    print(sequence_del("Heeyyy   yyouuuu!!!"))
 
 if __name__ == "__main__":
     main()
