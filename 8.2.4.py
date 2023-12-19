@@ -13,11 +13,9 @@ def sort_anagrams(list_of_strings):
                 found = True
                 break
         
-        # If the sorted word is not found in the sorted_words list, add it along with the word
         if not found:
             sorted_words.append([sorted_word, [word]])
     
-    # Extract the words from the sorted_words list and return as a list of lists
     result = [pair[1] for pair in sorted_words]
     
     return result
